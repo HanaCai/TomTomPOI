@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TestApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2ba-kB-6Hs">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kkJ-vY-fzK">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uCK-e0-APf">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
+                                    </arscnView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="uCK-e0-APf" secondAttribute="bottom" id="6SH-RA-yMM"/>
+                                    <constraint firstItem="uCK-e0-APf" firstAttribute="leading" secondItem="kkJ-vY-fzK" secondAttribute="leading" id="Gk7-YJ-aVZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="uCK-e0-APf" secondAttribute="trailing" id="Ss8-Uc-oCe"/>
+                                    <constraint firstItem="uCK-e0-APf" firstAttribute="top" secondItem="kkJ-vY-fzK" secondAttribute="top" id="WGH-KG-YHD"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kkJ-vY-fzK" secondAttribute="bottom" id="Rax-gN-Pkm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2ba-kB-6Hs" secondAttribute="trailing" id="Uc8-pM-wX7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kkJ-vY-fzK" secondAttribute="trailing" id="aKx-Jr-Cdc"/>
+                            <constraint firstItem="2ba-kB-6Hs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gBy-sK-Rcv"/>
+                            <constraint firstItem="kkJ-vY-fzK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="p6O-UA-1Ip"/>
+                            <constraint firstItem="2ba-kB-6Hs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pxb-16-FgB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2ba-kB-6Hs" secondAttribute="bottom" id="wWD-Fn-M8F"/>
+                            <constraint firstItem="kkJ-vY-fzK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wv6-Dd-IIT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="2ba-kB-6Hs" id="R5P-Bn-E9T"/>
+                        <outlet property="sceneView" destination="uCK-e0-APf" id="dH0-wp-a4j"/>
+                        <outlet property="senserView" destination="kkJ-vY-fzK" id="dQd-kB-P5n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
